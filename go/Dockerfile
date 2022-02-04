@@ -7,5 +7,8 @@ COPY . ./
 RUN go build -a -installsuffix nocgo -o /plugin .
 
 FROM scratch
+ARG pluginOwner pluginName pluginVersion
+LABEL "build.buf.plugins.runtime_library_versions.0.name"="${pluginOwner}/${pluginName}"
+LABEL "build.buf.plugins.runtime_library_versions.0.version"="${pluginVersion}"
 COPY --from=builder /plugin /
 ENTRYPOINT ["/plugin"]

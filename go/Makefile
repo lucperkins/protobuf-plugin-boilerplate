@@ -10,6 +10,9 @@ build:
 	docker build \
 	--tag $(TAG) \
 	--build-arg goVersion=$(GO_VERSION) \
+	--build-arg pluginOwner=$(OWNER) \
+	--build-arg pluginName=$(NAME) \
+	--build-arg pluginVersion=$(PLUGIN_VERSION) \
 	$(CURDIR)
 
 push:
