@@ -14,3 +14,9 @@ build:
 
 push:
 	docker push $(TAG)
+
+test:
+	go install
+	protoc \
+	--go-testing_out=proto \
+	proto/testing.proto

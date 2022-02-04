@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-
 	protogen.Options{}.Run(func(gen *protogen.Plugin) error {
 		for _, f := range gen.Files {
 			if !f.Generate {

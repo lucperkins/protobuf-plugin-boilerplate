@@ -1,4 +1,4 @@
-module just/testing
+module lucperkins/protoc-gen-go-testing
 
 go 1.16
 

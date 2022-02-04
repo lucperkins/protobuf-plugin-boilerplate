@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package testing;
+
+option go_package = "testing/input";
+
+message Hello {
+  string hello = 1;
+}
